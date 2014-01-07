@@ -1,0 +1,9 @@
+{
+    "name": "wechat_server",
+    "version": "0.0.1",
+    "description": "wechat public account service",
+    "main": "server.js",
+    "dependencies": {
+	"express": "3.x"
+    },
+}
