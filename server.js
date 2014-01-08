@@ -15,15 +15,20 @@ var express = require('express');
  * local dependencies.
  */
 var logger = require('./util/logger');
+var config = require('./config');
 
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.query());
+
 
 app.get('/', function(req, res, next){
-  return res.send('hello world!');
+  var token = config.TOKEN;
+  
+  return res.send(token);
 });
 
 app.listen(app.get('port'), function(){
