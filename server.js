@@ -16,14 +16,14 @@ var express = require('express');
  */
 var logger = require('./util/logger');
 var config = require('./config');
+var PORT = config.port;
 
 var app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', PORT || process.env.PORT || 3000);
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.query());
-
 
 app.get('/', function(req, res, next){
   var token = config.TOKEN;

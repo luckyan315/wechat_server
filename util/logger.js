@@ -56,7 +56,7 @@ logger.levels = {
   'warn': [logger.FORE_YELLOW, 'error']
 };
 
-logger.PREFIX = '[BrowserIDE]';
+logger.PREFIX = '[WeChat]';
 
 logger.info = function() {
   return logger.apply(null, ['info'].concat(slice.call(arguments)));
